@@ -7,6 +7,7 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.UUID;
 
 @RestController
@@ -23,7 +24,7 @@ public class BeerServiceController {
   @PostMapping(
       consumes = MediaType.APPLICATION_JSON_VALUE,
       produces = MediaType.APPLICATION_JSON_VALUE)
-  public ResponseEntity<BeerDto> saveNewBeer(@RequestBody BeerDto beerDto) {
+  public ResponseEntity<BeerDto> saveNewBeer(@Valid @RequestBody BeerDto beerDto) {
     // TODO IMPL
     return new ResponseEntity<>(HttpStatus.CREATED);
   }
@@ -32,8 +33,8 @@ public class BeerServiceController {
       value = "/{beerId}",
       consumes = MediaType.APPLICATION_JSON_VALUE,
       produces = MediaType.APPLICATION_JSON_VALUE)
-  public ResponseEntity updateBeerById(
-      @PathVariable("beerId") UUID beerId, @RequestBody BeerDto beerDto) {
+  public ResponseEntity<?> updateBeerById(
+      @PathVariable("beerId") UUID beerId, @Valid @RequestBody BeerDto beerDto) {
     // TODO IMPL
     return ResponseEntity.noContent().build();
   }
