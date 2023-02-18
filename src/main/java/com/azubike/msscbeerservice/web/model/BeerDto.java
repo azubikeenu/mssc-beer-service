@@ -23,8 +23,9 @@ public class BeerDto {
   @Null private Long version;
   @Positive @NotNull private Long upc;
   @Positive @NotNull private BigDecimal price;
-  private Integer quantityOnHand;
   @Null private OffsetDateTime createdDate;
   @Null private OffsetDateTime lastModifiedDate;
   @NotNull private BeerStyle beerStyle;
+  private Integer quantityOnHand;
+  private Integer quantityToBrew;
 }

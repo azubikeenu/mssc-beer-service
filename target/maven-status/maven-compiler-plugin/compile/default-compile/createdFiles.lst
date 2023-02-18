@@ -1,0 +1,4 @@
+com\azubike\msscbeerservice\web\mappers\BeerMapperImpl.class
+com\azubike\msscbeerservice\web\mappers\DateMapper.class
+com\azubike\msscbeerservice\web\controllers\aop\MvcExceptionHandler.class
+com\azubike\msscbeerservice\web\mappers\BeerMapper.class
